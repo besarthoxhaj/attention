@@ -3,6 +3,11 @@ import torch
 import math
 
 torch.manual_seed(42)
+
+# This random tensor can be interpreted as follows:
+#  - We have 1 example.
+#  - Each example consists of 5 words/tokens.
+#  - Each token is represented by a vector with 8 elements.
 x = torch.rand(1, 5, 8)
 
 qry_proj = torch.nn.Linear(8, 8)
